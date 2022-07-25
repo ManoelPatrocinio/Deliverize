@@ -1,0 +1,174 @@
+.header{
+    width: 100%;
+    height: 5rem;
+    min-width: 100vw;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--light_gray);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper_img{
+    width: 16.5%;
+    height: 3rem;
+    margin: 0 0 0 2.5rem;
+}
+.wrapper_img__logo{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2.5rem 0 0;
+    width: 53.125rem;
+}
+
+.items_content{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+.input_group{
+    width: 27.1%; 
+    height: 3rem;
+    padding: 0 8px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.input_group__label{
+    width: 100%;
+    font-size: 0.75rem;
+    color: var(--red_secondary);
+}
+.input_group__input{
+    width: 100%;
+    padding: 4px 0;
+    border: none;
+}
+ /* customization placeholder */
+ .input_group__input::-webkit-input-placeholder{
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.input_group__input::-moz-placeholder {
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.input_group__input:focus,
+.header__input_search:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.header__input_search{
+    width: 41.7%;
+    height: 3rem;
+
+    border: 1px solid var(--red_secondary);
+    border-radius: 4px;
+}
+
+ /* customization placeholder */
+.header__input_search::-webkit-input-placeholder{
+    padding: 0 1.016rem;
+    font-size: 0.875rem;
+    color: #656363;
+}
+.header__input_search::-moz-placeholder {
+    padding: 0 1.016rem;
+    font-size: 0.875rem;
+    color: #656363;
+
+}
+
+.items_content_icon{
+    font-size: 2rem;
+    margin: 0 8px;
+    color: var(--red_primary);
+
+}
+.items_content__span{
+    color: var(--red_primary);
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+}
+.items_content__cart_qtd{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: 29%;
+    top: 1px;
+    text-align: center;
+    background-color: var(--orange_secondary);
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+
+/*  Breakpoints Tablet */
+
+@media (min-width:768px) AND (max-width: 992px) {
+    .container {
+       width: 64%;
+    }
+    .input_group {
+        width: 20%;
+    }
+    
+    /* customization placeholder */
+    .input_group__input::-webkit-input-placeholder{
+        font-size: 0.7rem;
+    }
+    .input_group__input::-moz-placeholder {
+        font-size: 0.7rem;
+    }
+    .header__input_search {
+        width: 30.7%;
+    }
+    .header__input_search::-webkit-input-placeholder{
+        font-size: 0.7rem;
+    }
+    .header__input_search::-moz-placeholder {
+        font-size: 0.7rem;    
+    }
+    
+    .items_content_icon {
+        font-size: 1.5rem;
+    }
+    .items_content__span {
+
+        font-size: .9rem;
+  
+    }
+
+    .items_content > img{
+        width: 1.5rem;
+        height:1.5rem;
+    }
+}
+
+/*  Breakpoints Mobile */
+
+@media (max-width:767px){
+    .header{
+        justify-content: center;
+    }
+    .container{
+        display: none !important;
+    }
+    .wrapper_img{
+        width: 9.375rem;
+        margin: 0;
+    }
+}
