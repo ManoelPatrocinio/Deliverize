@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig } from "axios";
 import { useState, useEffect } from "react";
 
 const api = axios.create({
-  baseURL: 'https://api.github.com'
+  baseURL: import.meta.env.VITE_URL_API || "https://6077803e1ed0ae0017d6aea4.mockapi.io/test-frontend/"
 })
 
 export function useFetch<T = unknown>(url: string, options?: AxiosRequestConfig) {

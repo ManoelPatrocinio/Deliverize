@@ -2,7 +2,7 @@
     width: 100%;
     height: 5rem;
     min-width: 100vw;
-    overflow: hidden;
+    padding: 0 2.6rem;
 
     display: flex;
     align-items: center;
@@ -12,19 +12,15 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.wrapper_img{
+.header__wrapper_img{
     width: 16.5%;
     height: 3rem;
-    margin: 0 0 0 2.5rem;
+
 }
-.wrapper_img__logo{
-    width: 100%;
-    height: 100%;
-}
-.container{
+
+.header > .container{
     display: flex;
     justify-content: space-between;
-    margin: 0 2.5rem 0 0;
     width: 53.125rem;
 }
 
@@ -32,6 +28,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 
 }
 .input_group{
@@ -74,7 +73,7 @@
 .header__input_search{
     width: 41.7%;
     height: 3rem;
-
+    padding: 0 8px;
     border: 1px solid var(--red_secondary);
     border-radius: 4px;
 }
@@ -115,6 +114,70 @@
     border-radius: 50%;
 }
 
+.popOver_addedProd{
+    position: absolute;
+    margin-top: 3.438rem;
+    right: 1%;
+    z-index: 20;
+    min-width: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.688rem;
+    background-color: #F8F8F8;
+    filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.25));
+    transition: all 0.3;
+}
+.popOver_addedProd:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(50% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #F09035 transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    text-align: left;
+  }
+
+.popOver_addedProd__title{
+    width: 100%;
+    background-color: var(--orange_secondary);
+    padding: 9px;
+    text-align: center;
+    border-radius: 4px 4px 0px 0px;
+}
+.popOver_addedProd__title p{
+
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.popOver_addedProd__content{
+    width: 100%;
+    height: 100%;
+    padding: 8px 11px;
+}
+
+.popOver_addedProd__prod_name{
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #BC2E31;
+}
+.popOver_addedProd__items_list{
+   font-size:  0.75rem;
+   color: var(--gray_dark);
+   margin-left: 1.4rem;
+}
+.popOver_addedProd__content span{
+    font-size: 12px;
+}
+.popOver_addedProd__item{
+    padding: 2px 0;
+}
 
 /*  Breakpoints Tablet */
 
@@ -147,9 +210,7 @@
         font-size: 1.5rem;
     }
     .items_content__span {
-
         font-size: .9rem;
-  
     }
 
     .items_content > img{
@@ -163,6 +224,11 @@
 @media (max-width:767px){
     .header{
         justify-content: center;
+    }
+    .header__wrapper_img {
+        width: 46.7%;
+     
+         margin: 0 ; 
     }
     .container{
         display: none !important;
